@@ -10,13 +10,12 @@
 ##### 使用，要想看效果那只能自己搭个 http 服务跑起来才能看到效果（不含web socket 交互功能）
 
 
-
-Mac 系统 
+### Mac 系统 
 * 因为自带 python 2.0 环境，直接利用python的命令行就行
 * order 目录下，运行 python -m SimpleHTTPServer 8000
 
 
 
-Windows 系统
+### Windows 系统
 * 安装 node 环境
 * order 目录下，运行 http-server -p 8000
