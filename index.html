@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>约餐</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="juicer.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="web-socket.js"></script>
+</head>
+
+<body>
+    <!-- 提示框 -->
+    <div class="alert alert-success pop-alert text-center" id="successAlert" role="alert"></div>
+    <div class="alert alert-danger pop-alert text-center" id="dangerAlert" role="alert"></div>
+    <!-- 提示框结束 -->
+
+    <!-- 注册登录 -->
+    <div class="pop-bg"></div>
+    <div class="pop">
+        <div class="input-group signin-box" style="display:none;">
+            <p class="title">筑巢约餐平台</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="邮箱" id="signinName">
+            </div>
+            <div class="geduan"></div>
+            <div class="input-group">
+                <input type="password" class="form-control" placeholder="密码" id="signinPassword">
+            </div>
+            <div class="geduan"></div>
+            <button type="button" class="btn btn-danger btn-block" onclick="signinSubmit()">登录</button>
+            <div class="geduan"></div>
+            <div class="btn-group btn-block">
+                <button type="button" class="btn btn-warning pull-left" onclick="registerSubmit()">注册账户</button>
+                <button type="button" class="btn btn-primary pull-right" onclick="touristSubmit()">游客访问</button>
+            </div>
+            <div class="geduan"></div>
+            <p><a href="javascript:;" onclick="forgetSubmit()">忘记密码</a></p>
+        </div>
+        <!-- 邮箱注册 -->
+        <div class="input-group register-box" style="display:none;">
+            <p class="title">注册</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="输入邮箱" id="inputName">
+            </div>
+            <div class="geduan"></div>
+            <button type="button" class="btn btn-danger btn-block" onclick="emailSubmit()">提交</button>
+            <div class="geduan"></div>
+            <a href="javascript:;" onclick="backGo()">返回</a>
+        </div>
+        <!-- 设置密码 -->
+        <div class="input-group password-box" style="display:none;">
+            <p class="title">设置密码</p>
+            <div class="input-group">
+                <input type="password" class="form-control" placeholder="输入密码" id="inputPassword">
+            </div>
+            <div class="geduan"></div>
+            <div class="input-group">
+                <input type="password" class="form-control" placeholder="再次输入密码" id="inputPasswordAgain">
+            </div>
+            <div class="geduan"></div>
+            <button type="button" class="btn btn-danger btn-block" onclick="passwordSubmit()">提交</button>
+        </div>
+        <!-- 昵称填写 -->
+        <div class="input-group nickname-box">
+            <p class="title">帅气昵称</p>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="填写昵称" id="nickName">
+            </div>
+            <div class="geduan"></div>
+            <button type="button" class="btn btn-danger btn-block" onclick="goRoomSubmit()">确定（不反悔了）</button>
+            <div class="geduan"></div>
+        </div>
+    </div>
+    <!-- 注册登录结束 -->
+
+    <!-- 点餐正文 -->
+    <div class="navsFixed" id="navsTop">
+        <div class="bs-example" data-example-id="simple-nav-justified">
+            <ul class="nav nav-tabs" id="navs">
+                <li role="presentation" class="col-xs-6 text-center text-primary active" id="navOrder">
+                    <a href="javascript:;" onclick="orderShow()">点菜</a>
+                </li>
+                <li role="presentation" class="col-xs-6 text-center text-primary" id="navShopping">
+                    <a href="javascript:;" onclick="shoppingShow()">购物车</a>
+                    <span class="shoppingNum" id="shoppingNum">0</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="geduan"></div>
+    <div class="geduan"></div>
+    <div class="geduan"></div>
+    <div class="geduan"></div>
+    <!-- 点餐正文结束 -->
+
+    <!-- 显示菜单 -->
+    <div id="order"></div>
+    <!-- 显示菜单结束 -->
+
+    <!-- 显示购物车 -->
+    <div id="shoppingCar" style="display:none;">
+        <div id="people"></div>
+        <div id="shopping"></div>
+    </div>
+    <!-- 显示购物车结束 -->
+
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

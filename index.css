@@ -1,0 +1,105 @@
+*{
+    margin:0; 
+    padding:0;
+    list-style:none;
+    border:0;
+}
+html{
+    font-size:20px;
+}
+.pop-alert{
+    width:10rem;
+    position:fixed;
+    top:10px;
+    left:50%;
+    z-index:10000;
+    margin-left:-5rem;
+    display:none;
+}
+#navsTop{
+    display:none;
+}
+#order{
+    display:none;
+}
+.pop-bg{
+    width:100%;
+    height:100%;
+    background:url(images/bg.jpg) no-repeat center center; 
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+.pop{
+    width:12rem;
+    background:rgba(255,255,255,0.3);
+    position:fixed;
+    top:3rem;
+    left:50%;
+    margin-left:-6rem;
+    z-index:1001;
+    border-radius:0.5rem;
+    padding:1rem;
+}
+.pop .input-group{
+    width:100%;
+}
+.pop .title{
+    width:100%;
+    text-align:center;
+}
+.geduan{
+    width:100%;
+    height:15px;
+}
+.list-group-item:hover{
+    background:#fcf8e3;
+    cursor:pointer;
+}
+.m-r{
+    margin-right:20px;
+}
+.navsFixed{
+    position:fixed;
+    z-index:100;
+    width:100%;
+    background:#fff;
+}
+.shoppingNum{
+    color:#fff;
+    background:#ff0000;
+    width:1rem;
+    height:1rem;
+    border-radius:0.5rem;
+    line-height:1rem;
+    text-align:center;
+    display:block;
+    position:absolute;
+    right:1.5rem;
+    top:50%;
+    margin-top:-0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
